@@ -1,6 +1,7 @@
 package boot.startboot;
 
 import boot.startboot.repository.JdbcMemberRepository;
+import boot.startboot.repository.JdbcTemplateMemberRepository;
 import boot.startboot.repository.MemberRepository;
 import boot.startboot.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository(){
-        return new JdbcMemberRepository(dataSource);
+       // return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
