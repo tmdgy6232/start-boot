@@ -1,7 +1,13 @@
 package boot.startboot.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Member {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) // auto increment
     private Long id;
+
     private String name;
 
     public Long getId() {
